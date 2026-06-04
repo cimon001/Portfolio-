@@ -314,7 +314,7 @@ function Skills() {
   );
 }
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+function ProjectCard({ project }: { project: any }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -365,8 +365,8 @@ function Work() {
         Featured Projects
       </motion.h2>
       <div>
-        {projects.map((project, i) => (
-          <ProjectCard key={project.id} project={project} index={i} />
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </section>
